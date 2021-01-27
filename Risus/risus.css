@@ -1,5 +1,5 @@
 .sheet-wrapper {
-    overflow: hidden;
+    overflow: scroll;
     min-width: 830px;
 }
 
@@ -20,6 +20,7 @@
 .sheet-cliches {
     width: 370px;
     border: 1px solid gray;
+    margin: 2px;
 }
 
 .sheet-box {
@@ -71,8 +72,8 @@
     border-bottom: 1px solid black;
     height: 20px;
     line-height: 22px;
-    margin-top: -2px;
-    margin-bottom: 0;
+    margin-top: -1px;
+    margin-bottom: 1px;
     padding: 0 2px;
     outline: none;
 }
@@ -126,11 +127,11 @@ input.sheet-name {
 }
 
 .sheet-description {
-    height: 80px;
+    height: 216px;
 }
 
 .sheet-notes {
-    height: 116px;
+    height: 239px;
 }
 
 .sheet-rolltemplate-clicheRoll .sheet-template-container {
