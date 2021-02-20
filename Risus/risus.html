@@ -17,6 +17,9 @@
                 <div class="cell col-name">
                     Cliché name
                 </div>
+                <div class="cell col-x2">
+                    ×2
+                </div>
                 <div class="cell col-max">
                     Max
                 </div>
@@ -32,6 +35,9 @@
                     <div class="cell col-name">
                         <input type="text" name="attr_clichename" placeholder="Viking" />
                     </div>
+                    <div class="cell col-x2">
+                        <input type="checkbox" name="attr_x2_pumpable" value="1" />
+                    </div>
                     <div class="cell col-max">
                         <input type="number" name="attr_maxdice" min="0" value="1" />
                     </div>
@@ -40,7 +46,7 @@
                         <button type="roll" value="&{template:clicheRoll} {{characterName=@{character_name}}} {{clicheName=@{clichename}}} {{roll=[[@{current}d6]]}}" name="roll_cliche" />
                     </div>
                     <div class="cell col-pump">
-                        <button type="roll" value="&{template:clicheRoll} {{characterName=@{character_name}}} {{clicheName=@{clichename}}} {{pump=?{Pump amount|1}}} {{roll=[[(@{current}+?{Pump amount})d6]]}}" name="roll_cliche" class="roll_pump" />
+                        <button type="roll" value="&{template:clicheRoll} {{characterName=@{character_name}}} {{clicheName=@{clichename}}} {{pump=?{Pump amount|1}}} {{x2_pumpable=@{x2_pumpable}}} {{roll=[[(@{current}+?{Pump amount}*(1+@{x2_pumpable}))d6]]}}" name="roll_cliche" class="roll_pump" />
                     </div>
                 </div>
             </fieldset>
@@ -60,7 +66,9 @@
     <div class="sheet-template-container">
 	    <div class="sheet-template-character">{{characterName}}</div>
         <div class="sheet-template-cliche">{{clicheName}}</div>
-        {{#pump}} <div class="sheet-template-pump"><span>Pumped </span>{{pump}}</div> {{/pump}}
+        {{#pump}}
+        <div class="sheet-template-pump">Pumped {{pump}}<span class="sheet-template-x2-{{x2_pumpable}}"> (×2)</span></div>
+        {{/pump}}
 	    <div class="sheet-template-roll">{{roll}}</div>
     </div>
 </rolltemplate>

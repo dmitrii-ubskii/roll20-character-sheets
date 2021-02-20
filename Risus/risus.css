@@ -18,7 +18,7 @@
 }
 
 .sheet-cliches {
-    width: 370px;
+    width: 390px;
     border: 1px solid gray;
     margin: 2px;
 }
@@ -51,6 +51,7 @@
 }
 
 .sheet-cliches .sheet-col-name { width: 200px; }
+.sheet-cliches .sheet-col-x2 { width: 20px; }
 .sheet-cliches .sheet-col-max { width: 50px; }
 .sheet-cliches .sheet-col-dice { width: 80px; }
 .sheet-cliches .sheet-col-pump {
@@ -166,6 +167,13 @@ input.sheet-name {
     font-weight: bold;
     line-height: 100%;
     text-align: center;
+}
+
+.sheet-rolltemplate-clicheRoll .sheet-template-pump .sheet-template-x2-0 {
+    display: none;
+}
+
+.sheet-rolltemplate-clicheRoll .sheet-template-pump .sheet-template-x2-1 {
 }
 
 .sheet-rolltemplate-clicheRoll .sheet-template-roll {
